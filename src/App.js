@@ -94,8 +94,8 @@ function App(props) {
       <div className="list-group">
         {request1_list.map((val,key)=>{
           return(
-            <div className="list-group-item list-group-item-action list-group-item-danger" >Name : {val.userName}   Email : {val.email} Reason : {val.reason} <a href="/send_email_accepted"><button type="submit" id ="btn_req" onClick={()=>approve(val._id)} className="btn btn-success btn-sm">Approve</button></a>
-            <a href="/send_email"><button type="submit" id ="btn_req1" onClick={()=>reject(val._id)} className="btn btn-danger btn-sm">Reject</button></a>
+            <div className="list-group-item list-group-item-action list-group-item-danger" >Name : {val.userName}   Email : {val.email} Reason : {val.reason} <a href="https://atharvabokade.github.io/email-accept/"><button type="submit" id ="btn_req" onClick={()=>approve(val._id)} className="btn btn-success btn-sm">Approve</button></a>
+            <a href="https://atharvabokade.github.io/email-reject/"><button type="submit" id ="btn_req1" onClick={()=>reject(val._id)} className="btn btn-danger btn-sm">Reject</button></a>
             </div>
           );
         })}
