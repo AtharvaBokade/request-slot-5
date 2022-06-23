@@ -16,7 +16,7 @@ function App(props) {
   
   useEffect(()=>{
    
-    Axios.get('https://appointment0backend.herokuapp.com/requests5').then((res)=>{
+    Axios.get('https://appointment-backend-new-1.herokuapp.com/requests5').then((res)=>{
       setRequest1_list(res.data);
       console.log(res.data);
       
@@ -24,25 +24,25 @@ function App(props) {
     )
   },[]);
   const approve=(id)=>{
-    Axios.put("https://appointment0backend.herokuapp.com/approve",{
+    Axios.put("https://appointment-backend-new-1.herokuapp.com/approve",{
       id:id,
       approve:"Approved",
       email_send:"Elligible",
       
     });
-    Axios.put("https://appointment0backend.herokuapp.com/email_sending",{
+    Axios.put("https://appointment-backend-new-1.herokuapp.com/email_sending",{
       id:id,
       email_send:"Elligible",
     });
     
   }
   const reject=(id)=>{
-    Axios.put("https://appointment0backend.herokuapp.com/approve",{
+    Axios.put("https://appointment-backend-new-1.herokuapp.com/approve",{
       id:id,
       approve:"Rejected",
       email_send:"Elligible",
     });
-    Axios.put("https://appointment0backend.herokuapp.com/email_sending",{
+    Axios.put("https://appointment-backend-new-1.herokuapp.com/email_sending",{
       id:id,
       email_send:"Elligible",
     });
